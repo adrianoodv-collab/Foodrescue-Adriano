@@ -1,102 +1,179 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>FoodRescue</title>
+
 <style>
+:root {
+  --verde: #17613d;
+  --verdeclaro: #e9f7e8;
+  --naranja: #f47b28;
+  --oscuro: #203128;
+  --blanco: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
-  background: #fff8ee;
-  color: #24321d;
-  text-align: center;
+  font-family: Arial, sans-serif;
+  color: var(--oscuro);
+  background: #fffaf4;
 }
 
 nav {
-  background: #1f5b37;
-  color: white;
-  padding: 18px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 8%;
+  background: var(--verde);
+  color: var(--blanco);
+}
+
+.logo {
+  font-size: 22px;
+  font-weight: bold;
 }
 
 nav a {
-  color: white;
-  margin: 12px;
-}
-
-section {
-  padding: 55px 20px;
+  color: var(--blanco);
+  text-decoration: none;
+  margin-left: 18px;
 }
 
 .hero {
-  background: #e4f3dd;
+  padding: 90px 8%;
+  text-align: center;
+  background: var(--verdeclaro);
 }
 
 .hero h1 {
-  margin: 0 0 15px;
+  max-width: 800px;
+  margin: auto;
+  font-size: 48px;
+}
+
+.hero p {
+  max-width: 650px;
+  margin: 22px auto 30px;
+  font-size: 19px;
+  line-height: 1.5;
 }
 
 .button {
-  background: #ed7d31;
-  color: white;
-  padding: 15px 24px;
+  display: inline-block;
+  padding: 15px 25px;
+  background: var(--naranja);
+  color: var(--blanco);
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 8px;
+}
+
+.como {
+  padding: 70px 8%;
+  text-align: center;
+  background: var(--blanco);
+}
+
+.como h2 {
+  font-size: 34px;
+  margin-bottom: 35px;
 }
 
 .cards {
-  background: white;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
 }
 
 .card {
-  width: 260px;
-  margin: 12px;
-  padding: 24px;
+  width: 290px;
+  padding: 28px;
+  text-align: left;
   background: #f3faef;
+  border-radius: 12px;
+}
+
+.card h3 {
+  margin-top: 0;
+  color: var(--verde);
+}
+
+.card p {
+  line-height: 1.5;
 }
 
 footer {
-  background: #1f5b37;
-  color: white;
-  padding: 25px;
+  padding: 30px 8%;
+  text-align: center;
+  background: var(--verde);
+  color: var(--blanco);
+}
+
+@media (max-width: 600px) {
+  nav {
+    display: block;
+    text-align: center;
+  }
+
+  nav a {
+    display: inline-block;
+    margin: 15px 8px 0;
+  }
+
+  .hero h1 {
+    font-size: 35px;
+  }
 }
 </style>
 </head>
 
 <body>
 <nav>
+<div class="logo">FoodRescue</div>
+<div>
 <a href="#inicio">Inicio</a>
 <a href="#como">Cómo funciona</a>
 <a href="#beneficios">Beneficios</a>
+</div>
 </nav>
 
 <section id="inicio" class="hero">
-<h1>Comida rica. Menos desperdicio.</h1>
-<p>FoodRescue conecta restaurantes con personas que quieren comprar excedentes del día con descuento.</p>
-<a class="button" href="#como">Descubre FoodRescue</a>
+<h1>Rescata comida de restaurantes antes de que cierren.</h1>
+<p>FoodRescue conecta restaurantes con personas que quieren comprar excedentes del día con descuentos de 50% a 80%.</p>
+<a class="button" href="#como">Ver cómo funciona</a>
 </section>
 
-<section id="como" class="cards">
-<h2>Así funciona</h2>
+<section id="como" class="como">
+<h2>Así funciona FoodRescue</h2>
 
+<div class="cards">
 <div class="card">
 <h3>1. El restaurante publica</h3>
-<p>Los restaurantes suben alimentos que no vendieron antes de cerrar.</p>
+<p>Los restaurantes publican alimentos que no vendieron y que aún están disponibles antes del cierre.</p>
 </div>
 
 <div class="card">
-<h3>2. Tú eliges</h3>
-<p>Encuentra comida cerca de ti con descuentos de 50% a 80%.</p>
+<h3>2. Tú apartas tu pedido</h3>
+<p>Encuentra comida cerca de ti, aparta tu pedido en la app con descuento y realiza el pago.</p>
 </div>
 
 <div class="card">
-<h3>3. Recoges y disfrutas</h3>
-<p>Pagas desde la app y recoges tu pedido antes del cierre.</p>
+<h3>3. Recoges antes del cierre</h3>
+<p>Vas al restaurante en el horario indicado, recoges tu comida y ayudas a reducir el desperdicio.</p>
+</div>
 </div>
 </section>
 
-<section id="beneficios">
-<h2>Todos ganan</h2>
-<p>Los restaurantes recuperan parte de su inversión. Tú ahorras dinero. La ciudad desperdicia menos comida.</p>
-</section>
-
-<footer>
-<p>FoodRescue © 2026</p>
+<footer id="beneficios">
+<p>FoodRescue · Menos desperdicio, más acceso a comida rica.</p>
 </footer>
 </body>
 </html>
+
